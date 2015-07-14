@@ -1,0 +1,31 @@
+***************************************************************************************************************
+Operating System: 
+	Ubuntu 14.04 kylin
+
+How to install:
+	1.install python2.7 including corresponding dependences(ie. scikit-learn, scipy, numpy).
+	2.install Java runtime environment
+	3.install essentia(http://essentia.upf.edu/documentation/installing.html) and corresponding dependences(such as FFTW, libavcodec, libavformat, libavutil, libavresample, libsamplerate, Taglib, libYAML)
+
+
+How to use:
+	1.assure your correct format file.
+		*TrainList: data/1.wav	Rock
+		*TestList: data/2.wav
+	2.assure the correct place of your data.
+		*data: includes all the music songs(such as 1.wav, 2.wav)
+		*index: includes TrainList and TestList
+	3.extract features for both TrainList and TestList.
+		*commond: python src/run.py -ext index/TrainFile.list index/TestFile.list outFile.list
+	4.train and classify
+		*commond: python src/run.py -clf index/TranFile.list index/TestFile.list outFile.list
+	5.view your result
+		*outFile.list includes the prediction result, song name and label are seperated by tab.
+
+Personal information:
+	Name: Yao Cheng
+	E-mail: chengyao@pku.edu.cn
+	University: Peking University
+	Research: Music Emotion Recognition
+
+***************************************************************************************************************
